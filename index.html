@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa dos iPhones</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#0b0b0b;
+      color:white;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .container{
+      width:100%;
+      max-width:500px;
+      background:#111;
+      border:1px solid #222;
+      border-radius:24px;
+      padding:40px 30px;
+      text-align:center;
+      box-shadow:0 0 40px rgba(0,0,0,0.4);
+    }
+
+    .logo{
+      width:90px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:38px;
+      line-height:1.1;
+      margin-bottom:16px;
+      font-weight:800;
+    }
+
+    h1 span{
+      color:#f5b942;
+    }
+
+    p{
+      color:#bdbdbd;
+      margin-bottom:32px;
+      line-height:1.6;
+      font-size:15px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:16px;
+      border-radius:14px;
+      font-weight:600;
+      transition:0.2s;
+      border:1px solid #2a2a2a;
+      background:#181818;
+      color:white;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      border-color:#f5b942;
+    }
+
+    .highlight{
+      background:#f5b942;
+      color:#000;
+      border:none;
+    }
+
+    .footer{
+      margin-top:30px;
+      color:#777;
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <img 
+      class="logo"
+      src="https://cdn-icons-png.flaticon.com/512/0/747.png"
+      alt="Logo"
+    >
+
+    <h1>
+      Seu próximo <span>iPhone</span><br>
+      está aqui.
+    </h1>
+
+    <p>
+      iPhones seminovos, acessórios, assistência técnica
+      e atendimento especializado.
+    </p>
+
+    <!-- BOTÕES -->
+    <div class="buttons">
+
+      <a class="btn highlight" href="#">
+        📱 WhatsApp
+      </a>
+
+      <a class="btn" href="#">
+        📸 Instagram
+      </a>
+
+      <a class="btn" href="#">
+        👍 Facebook
+      </a>
+
+      <a class="btn" href="#">
+        ⭐ Avaliações Google
+      </a>
+
+      <a class="btn" href="#">
+        🎥 YouTube Shorts
+      </a>
+
+    </div>
+
+    <div class="footer">
+      Casa dos iPhones © 2026
+    </div>
+
+  </div>
+
+</body>
+</html>
