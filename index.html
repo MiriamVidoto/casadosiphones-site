@@ -2,13 +2,19 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Casa dos iPhones</title>
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONTE PRINCIPAL -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -16,83 +22,180 @@
     }
 
     body{
-      font-family:'Inter',sans-serif;
-      background:#0b0b0b;
-      color:white;
+      background:#12243A;
+      color:#FFFFFF;
+      font-family:'Montserrat', sans-serif;
       min-height:100vh;
+
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:30px;
+
+      padding:40px 20px;
     }
 
     .container{
       width:100%;
       max-width:500px;
-      background:#111;
-      border:1px solid #222;
-      border-radius:24px;
-      padding:40px 30px;
+
       text-align:center;
-      box-shadow:0 0 40px rgba(0,0,0,0.4);
     }
 
+    /* LOGO */
+
     .logo{
-      width:90px;
+      margin-bottom:50px;
+    }
+
+    .logo h1{
+      font-family:'Cormorant Garamond', serif;
+      font-size:64px;
+      font-weight:300;
+      letter-spacing:1px;
+      line-height:1;
+      color:#FFFFFF;
+    }
+
+    .logo span{
+      display:block;
+      font-size:14px;
+      letter-spacing:6px;
+      margin-top:10px;
+      color:#CFAF7C;
+      text-transform:uppercase;
+    }
+
+    /* HERO */
+
+    .hero h2{
+      font-family:'Cormorant Garamond', serif;
+      font-size:32px;
+      font-weight:300;
+      line-height:1.1;
       margin-bottom:20px;
     }
 
-    h1{
-      font-size:38px;
-      line-height:1.1;
-      margin-bottom:16px;
-      font-weight:800;
+    .hero h2 strong{
+      color:#CFAF7C;
+      font-weight:500;
     }
 
-    h1 span{
-      color:#f5b942;
-    }
-
-    p{
-      color:#bdbdbd;
-      margin-bottom:32px;
-      line-height:1.6;
+    .hero p{
+      color:#F5F5F5;
       font-size:15px;
+      line-height:1.8;
+      max-width:380px;
+      margin:0 auto 40px auto;
+      opacity:0.9;
     }
+
+    .video-card{
+      margin:24px auto 30px auto;
+      width:100%;
+      max-width:100%;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.15);
+      background:rgba(255,255,255,0.03);
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .video-frame{
+      position:relative;
+      width:100%;
+      aspect-ratio:9 / 16;
+      overflow:hidden;
+      background:#000;
+    }
+
+    @media(max-width:600px){
+      .video-card{
+        max-width:100%;
+      }
+    }
+
+    .video-frame iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+    /* BOTÕES */
 
     .buttons{
       display:flex;
       flex-direction:column;
-      gap:14px;
+      gap:16px;
     }
 
     .btn{
       text-decoration:none;
-      padding:16px;
-      border-radius:14px;
-      font-weight:600;
-      transition:0.2s;
-      border:1px solid #2a2a2a;
-      background:#181818;
-      color:white;
+
+      padding:18px;
+      border-radius:16px;
+
+      border:1px solid rgba(255,255,255,0.15);
+
+      color:#FFFFFF;
+
+      transition:0.3s ease;
+
+      backdrop-filter:blur(10px);
+
+      background:rgba(255,255,255,0.03);
+
+      font-size:15px;
+      letter-spacing:0.5px;
     }
 
     .btn:hover{
       transform:translateY(-2px);
-      border-color:#f5b942;
+
+      border-color:#CFAF7C;
+
+      background:rgba(255,255,255,0.06);
     }
 
-    .highlight{
-      background:#f5b942;
-      color:#000;
+    .btn.gold{
+      background:#CFAF7C;
+      color:#12243A;
       border:none;
+      font-weight:600;
     }
+
+    .btn.gold:hover{
+      background:#e2c18f;
+    }
+
+    /* FOOTER */
 
     .footer{
-      margin-top:30px;
-      color:#777;
-      font-size:13px;
+      margin-top:45px;
+
+      font-size:12px;
+      letter-spacing:2px;
+
+      color:#FFFFFF90;
+      text-transform:uppercase;
     }
+
+    /* MOBILE */
+
+    @media(max-width:600px){
+
+      .hero h2{
+        font-size:20px;
+      }
+
+      .logo h1{
+        font-size:52px;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -101,46 +204,59 @@
   <div class="container">
 
     <!-- LOGO -->
-    <img 
-      class="logo"
-      src="https://cdn-icons-png.flaticon.com/512/0/747.png"
-      alt="Logo"
-    >
 
-    <h1>
-      Seu próximo <span>iPhone</span><br>
-      está aqui.
-    </h1>
+    <div class="logo">
+      <img src="Logo.png" width="200" height="200" alt="Logo">
+    </div>
 
-    <p>
-      iPhones seminovos, acessórios, assistência técnica
-      e atendimento especializado.
-    </p>
 
-    <!-- BOTÕES -->
+    <section class="hero">
+
+      <h2>
+        Seu próximo <strong>iPhone</strong><br>
+        está aqui.
+      </h2>
+
+      <p>
+        iPhones novos e seminovos, acessórios e assistência especializada
+        com atendimento premium e entrega para todo o Brasil.
+      </p>
+
+    </section>
+
+    <!-- LINKS -->
+
     <div class="buttons">
 
-      <a class="btn highlight" href="#">
-        📱 WhatsApp
+      <a href="https://wa.me/5513992095884" class="btn gold" target="_blank" rel="noopener noreferrer">
+        WhatsApp
       </a>
 
-      <a class="btn" href="#">
-        📸 Instagram
+      <a href="https://www.instagram.com/casadosiphones_box70/" class="btn" target="_blank" rel="noopener noreferrer">
+        Instagram
       </a>
 
-      <a class="btn" href="#">
-        👍 Facebook
-      </a>
-
-      <a class="btn" href="#">
-        ⭐ Avaliações Google
-      </a>
-
-      <a class="btn" href="#">
-        🎥 YouTube Shorts
+      <a href="#" class="btn">
+        Facebook
       </a>
 
     </div>
+
+    <div class="video-card">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/lLRj7ILTtyc?controls=1&rel=0&modestbranding=1&playsinline=1"
+          title="Vídeo promocional da Casa dos iPhones"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+
+    <!-- FOOTER -->
 
     <div class="footer">
       Casa dos iPhones © 2026
